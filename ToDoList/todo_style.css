@@ -1,0 +1,40 @@
+
+
+#title {
+    margin: 3%;
+    text-align: center;
+}
+
+
+.input-group {
+    margin-left: 4%;
+}
+
+.input-group-append {
+    margin-right: 8%;
+}
+
+.list-group {
+    margin-top: 6%;
+}
+
+
+.list-group-item {
+    /* border-style: none !important; */
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    float: left;
+    text-align: left;
+}
+
+
+
+/* Icons class */
+.btn:not(.btn-success) {
+    float: right;
+    text-align: right;
+    margin: 0.5%;
+}
+
