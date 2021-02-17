@@ -1,58 +1,56 @@
+////////////////////////////////////////////////////////
+// Javascript functions needed to work the site properly
+////////////////////////////////////////////////////////
 
-// Probably not needed function
-function getCSSRule(ruleName) {
-    ruleName = ruleName.toLowerCase();
-    var result = null;
-    var find = Array.prototype.find;
 
-    find.call(document.styleSheets, styleSheet => {
-        result = find.call(styleSheet.cssRules, cssRule => {
-            return cssRule instanceof CSSStyleRule 
-                && cssRule.selectorText.toLowerCase() == ruleName;
-        });
-        return result != null;
-    });
-    return result;
-}
+// Set enter_key to press input_button
+let input = document.querySelector('input');
+input.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+        document.getElementById('button_input').click();
+        console.log('hello');
+    }
+})
 
 
 // Global variable
 let item_counter = 0;
 
+// Function to add an item
 function add_item() {    
     // Get the input's text
     let text = document.getElementById("main_input").value;
     
-    document.getElementById("list").innerHTML += "<li class='list-group-item'>" + text + "<i class='fa fa-times-circle'></i><i class='fa fa-check-circle'></i></i></li>";
+    document.getElementById("list").innerHTML += '<li id="item' + item_counter.toString() + '" class="list-group-item">' + text +
+    '<button type="button" class="btn btn-outline-danger" onclick="fail_btn(this.parentNode.id)"><i class="fa fa-times-circle"></i></button>' +
+    '<button type="button" class="btn btn-outline-success" onclick="suc_btn(this.parentNode.id)"><i class="fa fa-check-circle"></i></button>' +
+    '</li>';
 
-    // Add real innerHTML code for the function above
+    item_counter += 1;
 }
 
-
+// Function for success button
 function suc_btn(clicked_id) {
-    // Use clicked_id to see which button is pressed
-    // cross the text and make the background green
-
-    // For already created rules
-    // let header = getCSSRule('#' + clicked_id);
-    // header.style.backgroundColor = 'green';
-
-    
-    // Create new rules
+    // Create new css rules
     let style = document.createElement('style');
-    // style.type = 'text/css';
     style.innerHTML = '#' + clicked_id + ' { text-decoration: line-through; background-color: rgb(124, 250, 124); }';
     document.getElementsByTagName('head')[0].appendChild(style);
 }
 
+// Function for fail button
 function fail_btn(clicked_id) {
     // Delete the item entirely
+    // (set the display property to none)
+    let style = document.createElement('style');
+    style.innerHTML = '#' + clicked_id + ' { display: none; }';
+    document.getElementsByTagName('head')[0].appendChild(style);
 }
 
-
-
-
-// LINKS
-// https://jsbeginners.com/todo-list-javascript-project-v1/
-// https://hackerthemes.com/bootstrap-cheatsheet/
-
+// Function for clear_all button
+function clear_all() {
+    for (let i=0 ; i<item_counter ; ++i) {
+        let style = document.createElement('style');
+        style.innerHTML = '#item' + i.toString() + ' { display: none; }';
+        document.getElementsByTagName('head')[0].appendChild(style);
+    }
+}

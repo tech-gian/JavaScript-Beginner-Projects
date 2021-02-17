@@ -1,3 +1,8 @@
+<!-----------------------------------------
+-- HTML code for ToDoList implementation --
+------------------------------------------>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
-
-    
 </head>
 <body>
-    
     <!-- Title -->
     <h1 id="title">To Do List</h1>
 
@@ -17,22 +19,23 @@
     <div class="input-group">
         <input id="main_input" type="text" class="form-control" placeholder="Name..." aria-label="" aria-describedby="basic-addon1">
         <div id="input_btn" class="input-group-append">
-            <button class="btn btn-success" type="button" onclick="add_item()">Add Item</button>
+            <button id="button_input" class="btn btn-success" type="button" onclick="add_item()">Add Item</button>
         </div>
     </div>
 
     <!-- List -->
     <div>
         <ul id="list" class="list-group">
-            <li id="item1" class="item1 list-group-item">Item1
-                <button type="button" class="btn btn-outline-danger" onclick="fail_btn(this.parentNode.id)"><i class="fa fa-times-circle"></i></button>
-                <button type="button" class="btn btn-outline-success" onclick="suc_btn(this.parentNode.id)"><i class="fa fa-check-circle"></i></button></li>
         </ul>
     </div>
 
+    <!-- Clear all -->
+    <div id="clear_all">
+        <button type="button" class="btn btn-outline-info" onclick="clear_all()">Clear All</button>
+    </div>
 
 
-    <!-- Local files -->
+    <!-- Local files for function_implementation and css rules -->
     <script src="todo.js"></script>
     <link rel="stylesheet" href="todo_style.css">
 

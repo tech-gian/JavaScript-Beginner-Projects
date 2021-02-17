@@ -1,26 +1,30 @@
+/*********************************
+* CSS Rules for ToDoList project *
+*********************************/
 
 
+/* Rules for main_title */
 #title {
     margin: 3%;
     text-align: center;
 }
 
-
+/* Rules for input */
 .input-group {
     margin-left: 4%;
 }
 
+/* Rules for input_button */
 .input-group-append {
     margin-right: 8%;
 }
 
+/* Rules for the list of items */
 .list-group {
-    margin-top: 6%;
+    margin-top: 3%;
 }
 
-
 .list-group-item {
-    /* border-style: none !important; */
     margin-top: 2%;
     margin-left: 10%;
     margin-right: 10%;
@@ -29,8 +33,6 @@
     text-align: left;
 }
 
-
-
 /* Icons class */
 .btn:not(.btn-success) {
     float: right;
@@ -38,3 +40,9 @@
     margin: 0.5%;
 }
 
+/* Rules for clear_all button */
+#clear_all {
+    margin-top: 3%;
+    margin-left: 4%;
+    width: 18%;
+}
