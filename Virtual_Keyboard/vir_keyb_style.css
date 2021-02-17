@@ -1,0 +1,28 @@
+h1 {
+    margin: 3%;
+    text-align: center;
+}
+
+.input-group {
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.input-group-append {
+    margin-right: 4%;
+}
+
+
+#main_keyboard {
+    border: solid 0.5px;
+    margin: 2%;
+    background-color: black;
+    width: 96%
+}
+
+#main_keyboard button {
+    margin: 1%;
+    padding: 2%;
+}
+
+

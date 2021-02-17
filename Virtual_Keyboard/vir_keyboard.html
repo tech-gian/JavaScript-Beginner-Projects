@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+</head>
+<body>
+    
+    <!-- Title -->
+    <h1>Virtual Keyboard</h1>
+
+    <!-- Input form -->
+    <div id="input_form" class="input-group">
+        <input type="text" class="form-control" placeholder="Type anything..." aria-label="" aria-describedby="basic-addon1">
+        <div class="input-group-append">
+            <button class="btn btn-success" type="button">Enter</button>
+        </div>
+    </div>
+
+
+    <!-- Main Keyboard -->
+    <div id="main_keyboard">
+        <div id="first_row">
+            <button type="button" class="btn btn-light" onclick="key('1')">1</button>
+            <button type="button" class="btn btn-light" onclick="key('2')">2</button>
+            <button type="button" class="btn btn-light" onclick="key('3')">3</button>
+            <button type="button" class="btn btn-light" onclick="key('4')">4</button>
+            <button type="button" class="btn btn-light" onclick="key('5')">5</button>
+            <button type="button" class="btn btn-light" onclick="key('6')">6</button>
+            <button type="button" class="btn btn-light" onclick="key('7')">7</button>
+            <button type="button" class="btn btn-light" onclick="key('8')">8</button>
+            <button type="button" class="btn btn-light" onclick="key('9')">9</button>
+            <button type="button" class="btn btn-light" onclick="key('0')">0</button>
+        </div>
+        <div id="sec_row">
+            <button type="button" class="btn btn-light" onclick="key('q')">q</button>
+            <button type="button" class="btn btn-light" onclick="key('w')">w</button>
+            <button type="button" class="btn btn-light" onclick="key('e')">e</button>
+            <button type="button" class="btn btn-light" onclick="key('r')">r</button>
+            <button type="button" class="btn btn-light" onclick="key('t')">t</button>
+            <button type="button" class="btn btn-light" onclick="key('y')">y</button>
+            <button type="button" class="btn btn-light" onclick="key('u')">u</button>
+            <button type="button" class="btn btn-light" onclick="key('i')">i</button>
+            <button type="button" class="btn btn-light" onclick="key('o')">o</button>
+            <button type="button" class="btn btn-light" onclick="key('p')">p</button>
+        </div>
+        <div id="third_row">
+            <button type="button" class="btn btn-light" onclick="key('a')">a</button>
+            <button type="button" class="btn btn-light" onclick="key('s')">s</button>
+            <button type="button" class="btn btn-light" onclick="key('d')">d</button>
+            <button type="button" class="btn btn-light" onclick="key('f')">f</button>
+            <button type="button" class="btn btn-light" onclick="key('g')">g</button>
+            <button type="button" class="btn btn-light" onclick="key('h')">h</button>
+            <button type="button" class="btn btn-light" onclick="key('j')">j</button>
+            <button type="button" class="btn btn-light" onclick="key('k')">k</button>
+            <button type="button" class="btn btn-light" onclick="key('l')">l</button>
+        </div>
+        <div id="forth_row">
+            <button type="button" class="btn btn-light" onclick="key('Caps')">CapsLock</button>
+            <button type="button" class="btn btn-light" onclick="key('z')">z</button>
+            <button type="button" class="btn btn-light" onclick="key('x')">x</button>
+            <button type="button" class="btn btn-light" onclick="key('c')">c</button>
+            <button type="button" class="btn btn-light" onclick="key('v')">v</button>
+            <button type="button" class="btn btn-light" onclick="key('b')">b</button>
+            <button type="button" class="btn btn-light" onclick="key('n')">n</button>
+            <button type="button" class="btn btn-light" onclick="key('m')">m</button>
+            <button type="button" class="btn btn-light" onclick="key('bcksp')">Backspace</button>
+        </div>
+        <div id="fifth_row">
+            <button type="button" class="btn btn-light" onclick="key('spcb')">Spacebar</button>
+            <button type="button" class="btn btn-light" onclick="key('enter')">Enter</button>
+        </div>
+    </div>
+
+
+
+    <!-- Local files for function_implementation and css rules -->
+    <script src="vir_keyboard.js"></script>
+    <link rel="stylesheet" href="vir_keyb_style.css">
+
+    <!-- Bootstrap CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</body>
+</html>
+
+
+
