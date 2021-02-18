@@ -8,7 +8,6 @@ let input = document.querySelector('input');
 input.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
         document.getElementById('button_input').click();
-        console.log('hello');
     }
 })
 
