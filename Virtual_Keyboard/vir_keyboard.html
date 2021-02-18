@@ -1,3 +1,7 @@
+<!-----------------------------------------------
+- HTML code for virtual_keyboard implementation -
+------------------------------------------------>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +16,9 @@
 
     <!-- Input form -->
     <div id="input_form" class="input-group">
-        <input type="text" class="form-control" placeholder="Type anything..." aria-label="" aria-describedby="basic-addon1">
+        <input id="input_text" type="text" class="form-control" placeholder="Type anything..." aria-label="" aria-describedby="basic-addon1">
         <div class="input-group-append">
-            <button class="btn btn-success" type="button">Enter</button>
+            <button id="button_enter" class="btn btn-success" type="button" onclick="enter()">Enter</button>
         </div>
     </div>
 
@@ -57,7 +61,7 @@
             <button type="button" class="btn btn-light" onclick="key('l')">l</button>
         </div>
         <div id="forth_row">
-            <button type="button" class="btn btn-light" onclick="key('Caps')">CapsLock</button>
+            <button id="capslock" type="button" class="btn btn-light" onclick="key('caps')">CapsLock</button>
             <button type="button" class="btn btn-light" onclick="key('z')">z</button>
             <button type="button" class="btn btn-light" onclick="key('x')">x</button>
             <button type="button" class="btn btn-light" onclick="key('c')">c</button>
@@ -65,14 +69,13 @@
             <button type="button" class="btn btn-light" onclick="key('b')">b</button>
             <button type="button" class="btn btn-light" onclick="key('n')">n</button>
             <button type="button" class="btn btn-light" onclick="key('m')">m</button>
-            <button type="button" class="btn btn-light" onclick="key('bcksp')">Backspace</button>
+            <button id="backspace" type="button" class="btn btn-light" onclick="key('bcksp')">Backspace</button>
         </div>
         <div id="fifth_row">
-            <button type="button" class="btn btn-light" onclick="key('spcb')">Spacebar</button>
-            <button type="button" class="btn btn-light" onclick="key('enter')">Enter</button>
+            <button id="spacebar" type="button" class="btn btn-light" onclick="key(' ')">Spacebar</button>
+            <button id="enter" type="button" class="btn btn-light" onclick="enter()">Enter</button>
         </div>
     </div>
-
 
 
     <!-- Local files for function_implementation and css rules -->
@@ -83,9 +86,5 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </body>
 </html>
-
-
-

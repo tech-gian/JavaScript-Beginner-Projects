@@ -1,8 +1,20 @@
+/*********************************
+* CSS Rules for virtual_keyboard *
+*********************************/
+
+
+/* General rules for site */
+body {
+    background-color: rgb(117, 165, 149) !important;
+}
+
 h1 {
     margin: 3%;
     text-align: center;
 }
 
+
+/* Rules for the input_form */
 .input-group {
     margin-top: 3%;
     margin-left: 2%;
@@ -13,11 +25,14 @@ h1 {
 }
 
 
+/* Rules for the keyboard */
 #main_keyboard {
-    border: solid 0.5px;
+    border: solid 1px;
+    border-radius: 3%;
     margin: 2%;
-    background-color: black;
+    background-color: rgb(57, 56, 63);
     width: 96%
+    
 }
 
 #main_keyboard button {
@@ -26,3 +41,44 @@ h1 {
 }
 
 
+/* Rules for the buttons */
+.btn-light {
+    width: 7%;
+}
+
+#spacebar {
+    margin-left: 26% !important;
+    width: 40%;
+}
+
+#enter {
+    float: right;
+    margin-right: 2% !important;
+    width: 17%;
+}
+
+#capslock {
+    float: left;
+    margin-left: 2% !important;
+    width: 12%;
+}
+
+#backspace {
+    float: right;
+    margin-right: 2% !important;
+    width: 15%;
+}
+
+
+/* Margin rules for each row */
+#third_row button {
+    margin-left: 2%;
+}
+
+#sec_row button {
+    margin-left: 1.5%;
+}
+
+#first_row button {
+    margin-left: 1.2%;
+}
