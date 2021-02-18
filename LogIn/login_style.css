@@ -1,0 +1,39 @@
+
+
+
+body {
+    background-color: rgb(245, 214, 175) !important;
+}
+
+
+h1 {
+    margin-bottom: 3% !important;
+    text-align: center;
+}
+
+#main_box {
+    border: solid 2px rgb(30, 29, 32);
+    border-radius: 2%;
+    width: 40%;
+    margin: auto;
+    background-color: rgb(223, 224, 224);
+}
+
+#main_box input {
+    margin: 3%;
+    border-width: 2px;
+    border-color: #b1b6bb;
+}
+
+
+#enter {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#enter button {
+    margin: 0 auto;
+    display: block;
+}
+
+
