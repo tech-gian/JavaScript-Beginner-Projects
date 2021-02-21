@@ -2,12 +2,22 @@
 
 
 // Set enter_key to press enter_button
-let input = document.querySelector('input');
-input.addEventListener('keyup', (e) => {
-    if (e.keyCode === 13) {
-        document.getElementById('enter_button').click();
+let input = document.getElementById("password");
+let input1 = document.getElementById("username");
+
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("enter_button").click();
     }
-})
+});
+input1.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+
+        document.getElementById("enter_button").click();
+    }
+});
 
 
 // Global credentials
@@ -32,7 +42,7 @@ function enter() {
 
     if (user == username) {
         if (pass == password) {
-            // TODO
+            window.open("next_page.html");
         }
         else {
             alert('Wrong password. Try again!');
