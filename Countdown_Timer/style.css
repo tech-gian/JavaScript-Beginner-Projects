@@ -1,0 +1,26 @@
+/* CSS Rules */
+/*************/
+
+/* TODO: Improve mobile version */
+
+body {
+    background-image: url("./mountain.jpg");
+    background-size: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+.flex-parent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.flex-child {
+    font-size: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
