@@ -1,0 +1,67 @@
+/* CSS Rules for the elements of the page */
+/******************************************/
+
+body {
+    color: #D0D1DB !important;
+    background-color: #2E2A68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#search {
+    margin-top: 12%;
+    width: 20em;
+}
+
+input {
+    color: white !important;
+    background-color: #453f99 !important;
+    border: #5b54c7 !important;
+}
+
+#main-card {
+    
+    box-shadow: 20px 20px 50px #422b6b;
+    background-color: #5f3f99;
+
+    margin-top: 3%;
+    height: 20em;
+    width: 50em;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+#main-card img {
+    width: 20%;
+    height: 50%;
+    border-radius: 50%;
+    
+    margin-top: 10%;
+    margin-left: 4%;
+    
+}
+
+#user {
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+#follow {
+    display: flex;
+    justify-content: start;
+}
+
+.repo_link {
+    background-color: #2E2A68;
+    color: #835fe7;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-decoration: none !important;
+}
+
+.repo_link:hover {
+    color: #5c3b91;
+}
