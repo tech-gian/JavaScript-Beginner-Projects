@@ -1,0 +1,116 @@
+body {
+    background-color: #373B69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#search-bar {
+    width: 20%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar input {
+    padding: 3%;
+    margin-right: 2%;
+    border: #708ED2 1px solid;
+    color: #708ED2;
+    background-color: #373B69;
+}
+
+#search-bar input:focus {
+    outline: none;
+}
+
+#search-bar button {
+    padding: 3%;
+    border: #708ED2 1px solid;
+    color: #EBE5E2;
+    background-color: #708ED2;
+}
+
+#search-bar button:focus {
+    outline: none;
+}
+
+#cards {
+    width: 100%;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    border: none;
+    background-color: #708ED2;
+    box-shadow: 20px 20px 50px #181f2e;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body h5 {
+    color: #cc9f24;
+    padding: 4%;
+    background-color: #3c4d74;
+}
+
+.card-body a {
+    text-decoration: none;
+    color: #373B69;
+}
+
+.card-body a:hover {
+    color: #16182b;
+}
+
+.card img {
+    transition: all 1s ease;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+
+.card img:hover {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+#buttons {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+#buttons button {
+    margin-left: 2%;
+    margin-right: 2%;
+
+    width: 10em;
+    height: 3em;;
+
+    border: none;
+    color: #EBE5E2;
+    background-color: #708ED2;
+}
+
+#buttons button:focus {
+    outline: none;
+}
+
+.cur-style {
+    transition: all 0.4s ease;
+    background-color: #1f273a !important;
+}
