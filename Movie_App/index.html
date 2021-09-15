@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+
+    <title>Movie_App</title>
+</head>
+<body>
+    
+    <div id="search-bar">
+        <input class="rounded" type="text" placeholder="Search movies">
+        <button class="rounded" type="button">Enter</button>
+    </div>
+
+    <div id="buttons">
+        <button id="now_playing" class="rounded cur-style" type="button" onclick="movie_style(this.id)">Now Playing</button>
+        <button id="popular" class="rounded" type="button" onclick="movie_style(this.id)">Popular</button>
+        <button id="top_rated" class="rounded" type="button" onclick="movie_style(this.id)">Top Rated</button>
+        <button id="upcoming" class="rounded" type="button" onclick="movie_style(this.id)">Upcoming</button>
+    </div>
+
+    <div id="cards">
+
+    </div>
+
+</body>
+</html>
