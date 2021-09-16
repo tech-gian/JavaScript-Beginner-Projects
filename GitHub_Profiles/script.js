@@ -4,9 +4,15 @@
 
 // Function to search github_user
 
+var search_bar = document.getElementById("username");
+search_bar.addEventListener("keydown", function (e) {
+    if (e.key === 'Enter') {
+        search();
+    }
+});
+
 function search() {
     var username = document.getElementById("username").value;
-    console.log(username);
 
     fetch('https://api.github.com/users/' + username)
     .then(response => response.json())
