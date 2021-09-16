@@ -1,23 +1,17 @@
+<!-- HTML code for the basic elements of the site -->
+<!-------------------------------------------------->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-
     <title>Movie_App</title>
 </head>
 <body>
-    
     <div id="search-bar">
-        <input class="rounded" type="text" placeholder="Search movies">
-        <button class="rounded" type="button">Enter</button>
+        <input id="search-input" class="rounded" type="text" placeholder="Search movies">
     </div>
 
     <div id="buttons">
@@ -28,8 +22,20 @@
     </div>
 
     <div id="cards">
-
     </div>
 
+    <div id="pages">
+        <button id="prev" class="rounded disable-button" type="button" onclick="change_page(this.id)" disabled><i class="fas fa-caret-left"></i></button>
+        <button id="next" class="rounded" type="button" onclick="change_page(this.id)"><i class="fas fa-caret-right"></i></button>
+    </div>
+
+
+    <!-- All css and js files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </body>
 </html>
