@@ -1,3 +1,6 @@
+/* CSS Rules for all the elements displayed in the site */
+/********************************************************/
+
 body {
     background-color: #373B69;
     display: flex;
@@ -16,23 +19,12 @@ body {
 #search-bar input {
     padding: 3%;
     margin-right: 2%;
-    border: #708ED2 1px solid;
+    border: #708ED2 2px solid;
     color: #708ED2;
     background-color: #373B69;
 }
 
 #search-bar input:focus {
-    outline: none;
-}
-
-#search-bar button {
-    padding: 3%;
-    border: #708ED2 1px solid;
-    color: #EBE5E2;
-    background-color: #708ED2;
-}
-
-#search-bar button:focus {
     outline: none;
 }
 
@@ -68,12 +60,12 @@ body {
     background-color: #3c4d74;
 }
 
-.card-body a {
+.card a {
     text-decoration: none;
     color: #373B69;
 }
 
-.card-body a:hover {
+.card a:hover {
     color: #16182b;
 }
 
@@ -81,11 +73,16 @@ body {
     transition: all 1s ease;
     -webkit-filter: blur(0px);
     filter: blur(0px);
+
+    text-decoration: none;
+    color: #373B69;
 }
 
 .card img:hover {
     -webkit-filter: blur(3px);
     filter: blur(3px);
+
+    color: #16182b;
 }
 
 #buttons {
@@ -101,16 +98,41 @@ body {
     width: 10em;
     height: 3em;;
 
+    outline: none;
     border: none;
     color: #EBE5E2;
     background-color: #708ED2;
 }
 
-#buttons button:focus {
-    outline: none;
-}
-
 .cur-style {
     transition: all 0.4s ease;
     background-color: #1f273a !important;
+}
+
+#pages {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+#pages button {
+    width: 5em;
+    margin-left: 40%;
+    margin-right: 40%;
+    outline: none;
+    padding: 10%;
+
+    background-color: #708ED2;
+    border: none;
+    color: #EBE5E2;
+}
+
+#pages button:active, #search-bar button:active {
+    border: none;
+    background-color: #1f273a !important;
+}
+
+.disable-button {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
 }
