@@ -1,0 +1,44 @@
+body {
+    background-color: #CED1D6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropdown {
+    margin-top: 2%;
+}
+
+.dropdown button {
+    /* margin-left: 20%; */
+    outline: none;
+    border: none;
+    background-color: #CED1D6;
+    color: black;
+}
+
+.input-group {
+    margin-top: 5%;
+}
+
+#locations {
+    margin-top: 5%;
+}
+
+#locations h6 {
+    margin-bottom: 0;
+    color: #3A4967;
+}
+
+#locations a {
+    background-color: #A2A1A2;
+    color: #3A4967;
+
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#forecast {
+    margin-top: 2%;
+}
