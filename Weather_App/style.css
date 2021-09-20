@@ -42,3 +42,13 @@ body {
 #forecast {
     margin-top: 2%;
 }
+
+#location-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#location-img {
+    margin: 2%;
+}
