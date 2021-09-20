@@ -7,17 +7,6 @@
     <title>Weather_App</title>
 </head>
 <body>
-    
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle"
-                type="button" id="dropdownMenu1" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-          Current Location
-        </button>
-        <div class="dropdown-menu" id="saved_locations" aria-labelledby="dropdownMenu1">
-
-        </div>
-    </div>
 
     <div>
         <div class="input-group">
@@ -28,10 +17,36 @@
           </div>       
     </div>
 
-    <div id="forecast">
-      
+    <div class="dropdown">
+        <button id="dropdown-location" class="btn btn-secondary dropdown-toggle"
+                type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+          Select Location
+        </button>
+        <div class="dropdown-menu" id="saved_locations" aria-labelledby="dropdownMenu1">
+            <!-- Temporary -->
+            <a class="dropdown-item" id="264371" href="#" onclick="display_forecast(264371)">Athens, GR</a>
+        </div>
     </div>
-      
+
+    <div id="location-table" class="container">
+        <div id="location-img">
+
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Temperature</th>
+                    <th>Icon</th>
+                </tr>
+            </thead>
+            <tbody id="forecast">
+
+            </tbody>
+        </table>
+    </div>
       
 
 
