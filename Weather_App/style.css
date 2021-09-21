@@ -1,3 +1,7 @@
+/* CSS Rules for the site's style */
+/**********************************/
+
+
 body {
     background-color: #CED1D6;
     display: flex;
@@ -11,7 +15,6 @@ body {
 }
 
 .dropdown button {
-    /* margin-left: 20%; */
     outline: none;
     border: none;
     background-color: #CED1D6;
