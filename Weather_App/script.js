@@ -1,21 +1,13 @@
-
-// Useful links:
-// https://www.metaweather.com/api/#locationsearch    ????
-// https://openweathermap.org/current#cityid
-// https://openweathermap.org/forecast5
-// example: https://api.openweathermap.org/data/2.5/weather?q=London&appid=3265874a2c77ae4a04bb96236a642d2f
-// https://api.unsplash.com/search/photos?query=Athens&client_id=yGdhv9PPMKQ2kaim7GymC4XjTLHCfc8-VqNOlgNIUgo
-// api_key: 3265874a2c77ae4a04bb96236a642d2f
-
-// https://youtu.be/dtKciwk_si4?t=30932
-// https://www.uidesigndaily.com/posts/photoshop-weather-prognosis-day-156
-
+// Javascript code for basic functionality of the site
+//////////////////////////////////////////////////////
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const FORECAST_URL = (id) => {return `https://api.openweathermap.org/data/2.5/forecast?id=${id}&appid=3265874a2c77ae4a04bb96236a642d2f`;}
 const ICON_URL = (icon) => {return `https://openweathermap.org/img/wn/${icon}.png`;}
 const IMG_URL = (query) => {return `https://api.unsplash.com/search/photos?query=${query}&client_id=yGdhv9PPMKQ2kaim7GymC4XjTLHCfc8-VqNOlgNIUgo`;}
 
+
+// Event to listen for 'Enter'
 
 var location_input = document.getElementById("location-input");
 location_input.addEventListener("keydown", function(e) {
@@ -24,16 +16,14 @@ location_input.addEventListener("keydown", function(e) {
     }
 });
 
+
+// Search and display locations, based on search
+
 function search_location(location) {
     fetch('./Cities.json')
     .then(response => response.json())
     .then(data => display_locations(data, location));
 }
-
-// TODO:
-// Modify add_location() to do exactly what u want
-// Display weather info, photos, icons etc
-// Add alt_description to all images
 
 function display_locations(data, location) {
     var locations = document.getElementById("locations");
@@ -52,14 +42,21 @@ function display_locations(data, location) {
     }
 }
 
+
+// Add location to saved
+
 function add_location(location_city, location_country, location_id) {
     var dropdown = document.getElementById("saved_locations");
     dropdown.innerHTML += `<a class="dropdown-item" id="${location_id}" href="#" onclick="display_forecast(${location_id})">${location_city}, ${location_country}</a>`;
     document.getElementById("locations").innerHTML = '';
+
+    display_forecast(location_id);
 }
 
 const K_TO_C = (temp) => {return parseInt(temp - 273.15);}
 
+
+// Function to display the weather for current location
 
 function display_forecast(location_id) {
     document.getElementById("locations").innerHTML = '';
@@ -77,7 +74,7 @@ function display_forecast(location_id) {
         .then(resp => resp.json())
         .then(dat => {
             var location_table = document.getElementById("location-img");
-            location_table.innerHTML += `<img class="img-fluid rounded" src="${dat['results'][0]['urls']['small']}">`;
+            location_table.innerHTML += `<img class="img-fluid rounded" src="${dat['results'][0]['urls']['small']}" alt="${data['city']['name']}, ${data['city']['country']}">`;
         });
 
 
@@ -101,7 +98,7 @@ function display_forecast(location_id) {
                 forecast.innerHTML += `<tr>
                     <th scope="row">${DAYS[day_of_week]}</th>
                     <td>${parseInt(sum / counter)} &#8451;</td>
-                    <td><img src='${ICON_URL(data['list'][item]['weather'][0]['icon'].replace('n', 'd'))}'></td>
+                    <td><img src='${ICON_URL(data['list'][item]['weather'][0]['icon'].replace('n', 'd'))}' alt="${data['list'][item]['weather'][0]['description']}"></td>
                 </tr>`;
 
                 cur_date = data['list'][item]['dt_txt'].split(" ")[0];
@@ -114,4 +111,3 @@ function display_forecast(location_id) {
         }
     });
 }
-
