@@ -1,0 +1,41 @@
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f0f0f0;
+
+    transition: background-color 1s;
+}
+
+#btns {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group-text {
+    color: white;
+    background-color: rgb(26, 26, 26);
+    border-color: rgb(26, 26, 26);
+}
+
+.form-control, .form-control:active, .form-control:focus {
+    color: white;
+    box-shadow: none !important;
+    background-color: rgb(26, 26, 26);
+    border-color: rgb(26, 26, 26);
+}
+
+button {
+    box-shadow: none !important;
+}
+
