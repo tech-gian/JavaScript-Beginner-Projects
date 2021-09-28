@@ -1,9 +1,19 @@
-
-// TODO: Add enter button (associate with test it)
-//       Add comments
+// Script for site's functionality
+//////////////////////////////////
 
 const HEX_CHARS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
 
+
+// Pressing enter = 'Test it'
+var color_input = document.getElementById("hex-color");
+color_input.addEventListener("keydown", function (e) {
+    if (e.key === 'Enter') {
+        changeHex();
+    }
+});
+
+
+// Changing color, based on input
 function changeHex() {
     var val = document.querySelector('input').value;
     
@@ -38,6 +48,8 @@ function changeHex() {
     }
 }
 
+
+// Changing color, with a random one
 function randomHex() {
     var hex_color = ['#'];
 
@@ -52,4 +64,3 @@ function randomHex() {
     document.getElementById("hex-color").style.color = 'white';
     document.getElementById("body").style.backgroundColor = final;
 }
-
